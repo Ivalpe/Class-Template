@@ -16,3 +16,9 @@ jobs:
         uses: microsoft/setup-msbuild@v2
       - name: Build solution
         run: msbuild PhysicsGame.sln /p:Configuration=Release
+      - name: Create artifact directory
+        run: mkdir artifact/PhysicsGame
+      - name: Copy files to artifact directory
+        run: copy ./ artifact/PhysicsGame
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
