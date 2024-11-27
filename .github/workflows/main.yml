@@ -1,0 +1,7 @@
+name: Build
+
+#Build Main on commit
+on:
+  push:
+    branches:
+    - main
